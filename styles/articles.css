@@ -1,0 +1,242 @@
+.articles {
+    display: grid;
+    grid-template-columns: 285px 658px;
+    grid-template-rows: 200px;
+    column-gap: 29px;
+    row-gap: 20px;
+    grid-template-areas:
+    "catalog article"
+    "catalog article"
+    "navigation article"
+    "navigation article"
+    "navigation article";
+}
+
+.content {
+    padding-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article {
+    grid-area: article;
+}
+
+
+.catalog {
+    width: 285px;
+    height: 359px;
+    background: linear-gradient(148.57deg, #333333 5.7%, #2C2C2C 96.02%);
+    border-radius: 10px;
+    grid-area: catalog;
+    position: fixed;
+}
+
+.catalog__title {
+    width: 100%;
+    font-family: 'Pixel Times Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.catalog__title-list {
+    width: 100%;
+    font-family: 'Pixel Times Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #CE4A4A;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 0;
+}
+
+.catalog__list {
+    list-style-type: none;
+}
+
+.catalog__list-text {
+    text-decoration: none;
+    width: 100%;
+    font-family: 'Pixel Times';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    transition: text-shadow 0.2s;
+    margin: 0;
+}
+
+.catalog__list-text:hover {
+    text-shadow: 3px 4px 5px rgba(255, 255, 255, 0.25);
+}
+
+.navigation {
+    grid-area: navigation;
+    width: 285px;
+    height: 566px;
+    background: linear-gradient(166.88deg, #333333 5.46%, #2C2C2C 95.49%);
+    border-radius: 10px;
+    position: fixed;
+    bottom: -50px;
+}
+
+.navigation__title {
+    width: 100%;
+    font-family: 'Pixel Times Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navigation__list {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.navigation__text {
+    width: 100%;
+    font-family: 'Pixel Times Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #CE4A4A;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: text-shadow 0.3s;
+}
+
+.navigation__text:hover {
+    text-shadow: 3px 4px 5px rgba(228, 90, 90, 0.25);
+}
+
+.navigation__listitem {
+    padding-bottom: 10px;
+}
+
+
+.article {
+    width: 658px;
+    height: 100%;
+    background: linear-gradient(157.01deg, #333333 3.82%, #2C2C2C 94.55%);
+    border-radius: 10px;
+}
+
+.article__title {
+    width: 100%;
+    font-family: 'Pixel Times Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.article__subtitle {
+    padding-left: 20px;
+    font-family: 'Pixel Times Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    color: #CE4A4A;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.article__link {
+    color: #fff;
+    background-color: #CE4A4A;
+
+    padding: 0 8px;
+    margin-left: 1px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.2) -5px 4px 2px;
+    transition: color 0.2s, background-color 0.2s;
+    border: #CE4A4A 2px solid;
+}
+
+.article__link:hover {
+    color: #CE4A4A;
+    background-color: transparent;
+    border: #CE4A4A 2px solid;
+    
+}
+
+.article__text {
+    padding-left: 20px;
+    font-family: 'Pixel Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.article__code {
+    color: #FFFFFF;
+    padding: 0 8px;
+    margin-left: 1px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    background-color: #CE4A4A;
+
+}
+
+.article__textcode {
+    font-family: 'Pixel Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FFFFFF;
+
+}
+.article__text-Important {
+    font-family: 'Pixel Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #CE4A4A;
+
+}
+
+.article__listitem {
+    font-family: 'Pixel Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.link_disabled {
+    color: #999999;
+}
+.link_disabled:hover {
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}

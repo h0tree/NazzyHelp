@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>NazzyHelp - Помощь по установки Forge</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/articles.css">
+    <link rel="icon" href="../favicon.ico">
+    <script src="/scripts/Scroll.js"></script>
+</head>
+<body class="body">
+    <header class="header">
+        <a href="/index.html" class="header__name"><span class="header__name-red">Nazzy</span>Help</a>
+    </header>
+    <div class="content">
+    <main class="articles">
+        <section class="catalog">
+            <h2 class="catalog__title">Статьи</h2>
+            <h3 class="catalog__title-list">Главное</h3>
+            <ul class="catalog__list">
+                <li class="catalog__listitem">
+                    <a class="catalog__list-text" href="forge.html">Как установить сборку.</a>
+                </li>
+                <li class="catalog__listitem">
+                    <a class="catalog__list-text link_disabled" href="">Проблемы с картой.</a>
+                </li>
+                <li class="catalog__listitem">
+                    <a class="catalog__list-text" href="multipleer.html">Как играть с другими.</a>
+                </li>
+            </ul>
+            <h3 class="catalog__title-list">Другое</h3>
+            <ul class="catalog__list">
+                <li class="catalog__listitem">
+                    <a class="catalog__list-text" href="skin.html">Как получить ссылку на скин.</a>
+                </li>
+                <li class="catalog__listitem">
+                    <a class="catalog__list-text" href="https://discord.com/channels/664844827497594883/1323054659006365728">Нашёл баг?</a>
+                </li>
+            </ul>
+            <h3 class="catalog__title-list">Контакты</h3>
+            <ul class="catalog__list">
+                <li class="catalog__listitem">
+                    <a class="catalog__list-text link_disabled" href="">Добавить свою статью</a>
+                </li>
+            </ul>
+        </section>
+        <section class="navigation">
+            <h3 class="navigation__title">Навигация по статье</h3>
+            <ul class="navigation__list">
+                <li class="navigation__listitem">
+                    <a href="#create" class="navigation__text">Создание выделенного сервера</a>
+                </li>
+                <li class="navigation__listitem">
+                    <a href="#UPNP" class="navigation__text">UPNP Способ</a>
+                </li>
+                <li class="navigation__listitem">
+                    <a href="#RadminVPN" class="navigation__text">RadminVPN Способ</a>
+                </li>
+            </ul>
+        </section>
+        <section class="article">
+            <article>
+                <h1 class="article__title" id="title">Вы попали на статью где вам объяснят как поиграть с другими.</h1>
+                <p class="article__text">Есть два известных мне способа для совместной игры, это через:</p>
+                <ul class="article__list">
+                    <li class="article__listitem">
+                        <p class="article__text"><a href="#RadminVPN" class="article__link">RadminVPN</a>, но с ним больше задержка.</p></li>
+                    <li class="article__listitem"><p class="article__text">И <a href="#UPNP" class="article__link">UPnP</a> Перенос на способ по нажатию, который доступен не каждому, но имеет меньшую задержку.</p></li>
+                </ul>
+                <p class="article__text">Если вы играете в режим Hotel, DebtHunt то можете избежать создание выделенного сервера.</p>
+                <h2 class="article__subtitle" id="create">Создание выделенного сервера</h2>
+                <p class="article__text">Скачайте Forge - <a href="https://adfoc.us/serve/?id=27122882090280" class="article__link">нажать</a>. Откройте после загрузки.</p>
+                <p class="article__text">Создайте папку для сервера в удобном для вас месте.</p>
+                <br>
+                <p class="article__text">Нажмите Install server, после выберите путь до созданной папки нажав три точки, подтвердить путь можно нажав Open.</p>
+                <br>
+                <p class="article__text">После нажмите OK.</p>
+                <br>
+                <p class="article__text">Создайте файл server.properties и вставьте в него </p>
+                <div class="article__code">
+                <code class="article__textcode">
+                    online-mode=false <br>
+                    enable-command-block=true <br>
+                    allow-flight=true <br>
+                    spawn-protection=0 <br>
+                    gamemode=2 <br>
+                </code>
+                </div>
+                </p>
+                <p class="article__text">Создайте файл eula.txt и пропишите в него</p>
+                <div class="article__code">
+                <code class="article__textcode">
+                    eula=true <br>
+                </code>
+                </div>
+                </p class="article__text">
+                <p class="article__text">Перенесите файлы в папку с сервером. (Могут отличаться)</p>
+                <p class="article__text">mods, config, ModularWarfare</p>
+                <p class="article__text"> и мир, который следует переименовать в world (Он должен находиться прямо в корне сервера, не в saves)</p>
+                <br>
+                <p class="article__text">Для запуска сервера `forge-1.12.2-14.23.5.2860.jar` (Не `minecraft_server.1.12.2.jar`, иначе запустится Minecraft без Forge и сломается карта.)</p>
+                <h2 class="article__subtitle" id="UPNP">UPNP Способ</h2>
+                <img src="../imgas/image.png" alt="Окно программы UPNP" width="650px">
+                <ul class="article__list">
+                    <li class="article__listitem">
+                        <p class="article__text">
+                            1. Чтобы воспользоваться UPnP способом, достаточно нажать <span class="article__text-Important">Win+R</span>, вписать туда <span class="article__text-Important">powershell -command "irm https://raw.githubusercontent.com/notSeilce/UPnP-manager/refs/heads/main/legacyscript.ps1 | iex"</span class="article__text-Important"> и нажать <span class="article__text-Important">Enter</span>
+                        </p>
+                    </li>
+                    <li class="article__listitem">
+                        <p class="article__text">
+                            2. Нажмите <span class="article__text-Important">1</span> и <span class="article__text-Important">Enter</span>, после этого у вас откроются порты для выделенного сервера. и если вы играете открытие мира для сети нажмите <span class="article__text-Important">2 и Enter</span>, после вручную укажите порт мира указав протокол TCP/UDP
+                        </p>
+                    </li>
+                </ul>
+                <p class="article__text">Проверить доступность этого способа, можно нажав `3` и `Enter`</p>
+                <p class="article__text">Если пишет `No IGD UPnP Device found on the network` у вас либо нет возможности использовать UPnP либо он выключен у вас на роутере</p>
+                <br>
+                <p class="article__text">Проверить функцию UPnP можно на http://192.168.1.1/ или http://192.168.0.1/ (Обычно юзер и пароль - admin, либо посмотрите у вас за роутером)</p>
+                <h2 class="article__subtitle" id="RadminVPN">RadminVPN Способ</h2>
+                <p class="article__text">Скачиваем RadminVPN - <a href="https://download.radmin-vpn.com/download/files/Radmin_VPN_1.4.4642.1.exe" class="article__link">нажать</a>, после загрузки устанавливаем.</p>
+                <ul class="article__list">
+                    <li class="article__listitem"><p class="article__text">(ВСЕМ) Когда откроется нажимаем Система > Исключения брандмауэра > Разрешить все приложения</p></li>
+                </ul>
+                <p class="article__text">Для создании группы нажимаем Сеть > Создать сеть</p>
+                <p class="article__text">Вводим имя сети и придуманный вами пароль (Эти данные будут использоваться для подключения к группе)</p>
+                <br>
+                <p class="article__text">Чтобы присоединиться к группе нажимаем Сеть > Присоединиться к сети </p>
+                <p class="article__text">Вводим имя сети и пароль, что вам скинули.</p>
+                <br>
+                <p class="article__text">(ESC > открыть для сети)</p>
+                <p class="article__text">Если через открытие мира для сети:</p>
+                <p class="article__text">Ваш мир теперь можно найти в списке серверов</p>
+                <br>
+                <p class="article__text">Если у вас Сервер:</p>
+                <p class="article__text">Теперь если у вас включен сервер вы и другие игроки смогут подключаться к нему через ваш IP в RadminVPN (Он находится под вашим ником)</p>
+                <p class="article__text">Но вам желательно заходить прописав localhost</p>
+            </article>
+        </section>
+    </main>
+    </div>
+</body>
+</html>

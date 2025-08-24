@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Pixel Times Bold';
+    src: url('../font/PixelTimesBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pixel Times';
+    src: url('../font/PixelTimes.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.body {
+    margin: 0;
+    padding: 0;
+    background: url(../imgas/background.png);
+
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background: #313131;
+    display: flex;
+
+    align-items: center;
+
+}
+.header__name {
+    font-family: 'Pixel Times Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    padding-left: 84px;
+    text-decoration: none;
+    transition: text-shadow 0.1s;
+}
+
+.header__name-red {
+    color: #ED3A3A;
+}
+
+.header__name:hover {
+    text-shadow: rgba(255, 255, 255, 0.3) 2px 3px 6px;
+}
+
+.main {
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__content {
+width: 658px;
+height: 100%;
+background: linear-gradient(157.01deg, #333333 3.82%, #2C2C2C 94.55%);
+border-radius: 10px;
+}
+
+.main__title {
+    width: 658px;
+    height: 32px;
+    font-family: 'Pixel Times Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main__menu-list {
+    list-style-type: none;
+    display: flex;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 90px 0;
+}
+
+.main__menu-listitem {
+    width: 558px;
+    height: 116px;
+    background: #2A2A2A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    transition: transform 0.2s;
+}
+
+.main__menu-listitem:hover {
+    transform: scale(1.1);
+}
+
+.main__menu-text {
+    text-decoration: none;
+    margin: 0;
+    font-family: 'Pixel Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main__menu-button {
+    min-height: 100%;
+    min-width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
